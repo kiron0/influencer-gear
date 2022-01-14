@@ -84,6 +84,20 @@ label.logo a{
 }
 
 
+.checkbtn{
+    font-size: 25px;
+    color: #000;
+    float: left;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+
 /* Banner Section Style  */
 
 .banner {
@@ -280,4 +294,90 @@ footer p{
 .fab{
     color: white;
     margin-right: 16px;
+}
+
+
+@media (max-width: 688px) {
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    .banner {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .banner-left h1 {
+        font-size: 28px;
+    }
+    .items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .banner-left, .btn{
+        text-align: center;
+        margin: 0 auto;
+    }
+    .btn{
+        padding: 15px 40px;
+    }
+
+    hr{
+        display: none;
+    }
+
+    .ecommerce-logo{
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .contact {
+        display: block;
+        grid-template-columns: 1fr;
+    }
+    .section-title h2{
+        font-size: 18px;
+    }
+    .banner-left p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    label.logo{
+        font-size: 18px;
+        margin-right: 70px;
+    }
+    .checkbtn{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #ffffff;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+
 }
