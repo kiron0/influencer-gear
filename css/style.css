@@ -1,11 +1,16 @@
 /* google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600;700&display=swap");
 
+/* Reset Default Style */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
+
+/* Common Style/Utilities */
 
 body {
   background-color: #ffffff;
@@ -36,6 +41,8 @@ body {
     top: 0;
     font-size: 15px;
 }
+
+/* Navigation Bar Style  */
 
 nav {
     display: flex;
@@ -120,16 +127,17 @@ label.logo a{
 }
 
 
-.ecomerce-logo{
+/* Ecommmerce Logo Section  */
+
+.ecommerce-logo{
     display: flex;
     justify-content: space-between;
     margin: 50px;
     padding: 20px;
-    /* border: 5px solid rgba(116, 104, 104, 0.096); */
 }
 
 
-/* Products Collection Style  */
+/* Popular Collection Style  */
 
 .section-title {
     font-size: 24px;
@@ -141,7 +149,7 @@ label.logo a{
 .items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-gap: 30px;
 }
 
 .item {
@@ -153,11 +161,20 @@ label.logo a{
     border-radius: 5px;
 }
 
+.item img{
+    width: 100%;
+}
+
 .item h2{
     font-size: 28px;
     font-family: Poppins;
     font-weight: 500;
     color: #18191F;
+}
+
+.item p{
+    margin-top: 10px;
+    color: #787885;
 }
 
 span{
@@ -200,7 +217,7 @@ span{
 }
 
 
-/* Contact Style  */
+/* Contact Page Style  */
 
 .contact {
     display: grid;
