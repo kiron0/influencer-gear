@@ -41,7 +41,7 @@ body {
   font-size: 15px;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: #fff;
   border: 2px solid #e02c6d;
   color: #000;
@@ -56,8 +56,8 @@ nav {
   align-items: center;
 }
 
-nav ul li a:hover{
-    color: #e02c6d;;
+nav ul li a:hover {
+  color: #e02c6d;
 }
 
 label.logo {
@@ -111,7 +111,7 @@ label.logo a {
 
 .banner {
   min-height: 300px;
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
   margin: 30px;
@@ -146,7 +146,7 @@ label.logo a {
 }
 
 .banner-right img {
-  width: 100%;
+  width: 80%;
   transition: 0.5s all ease-in-out;
 }
 
@@ -238,8 +238,7 @@ span {
   margin: 20px;
 }
 
-
-.see-more:hover b{
+.see-more:hover b {
   color: #000;
 }
 
@@ -312,6 +311,12 @@ footer p {
 }
 
 @media only screen and (max-width: 600px) {
+  .banner-right {
+    order: 2;
+  }
+  .banner-right img {
+    align-items: center;
+  }
   .navbar-items {
     display: block;
     text-align: center;
@@ -398,41 +403,40 @@ footer p {
   }
 }
 
-@media only screen and (min-width: 601px) and  (max-width: 768px){
-    .navbar-items {
-        display: flex;
-      }
-      .checkbtn {
-        display: block;
-      }
-      label.logo {
-        font-size: 30px;
-        padding-left: 50px;
-        margin-right: 80px;
-      }
-      nav ul {
-        position: absolute;
-        width: 100%;
-        background: #ffffff;
-        top: 80px;
-        left: -100%;
-        transition: all 0.5s;
-        padding: 20px;
-        /* overflow: hidden; */
-      }
-      #check:checked ~ ul {
-        left: 0;
-      }
-      .banner {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .items {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .ecommerce-logo {
-        display: block;
-        text-align: center;
-        margin: 0 auto;
-      }
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .navbar-items {
+    display: flex;
+  }
+  .checkbtn {
+    display: block;
+  }
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+    margin-right: 80px;
+  }
+  nav ul {
+    position: absolute;
+    width: 100%;
+    background: #ffffff;
+    top: 80px;
+    left: -100%;
+    transition: all 0.5s;
+    padding: 20px;
+    /* overflow: hidden; */
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+  .banner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ecommerce-logo {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
-    
