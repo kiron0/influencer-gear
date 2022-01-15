@@ -21,7 +21,6 @@ body {
   padding: 0 30px;
   max-width: 1200px;
   margin: 0 auto;
-  background-image: url(images/Circle-design.svg);
 }
 
 .a-color {
@@ -49,6 +48,10 @@ nav {
   height: 80px;
   justify-content: space-between;
   align-items: center;
+}
+
+nav ul li a:hover{
+    color: #e02c6d;;
 }
 
 label.logo {
@@ -290,7 +293,7 @@ footer p {
   margin-right: 16px;
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .navbar-items {
     display: block;
     text-align: center;
@@ -298,9 +301,36 @@ footer p {
   label.logo {
     font-size: 30px;
     padding-left: 50px;
+    margin-right: 80px;
   }
   nav ul li a {
     font-size: 16px;
+  }
+
+  .checkbtn {
+    display: block;
+  }
+
+  nav ul {
+    position: absolute;
+    width: 100%;
+    background: #ffffff;
+    top: 80px;
+    left: -100%;
+    transition: all 0.5s;
+    padding: 20px;
+    overflow: hidden;
+  }
+  nav ul li {
+    display: block;
+    margin: 20px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  #check:checked ~ ul {
+    left: 0;
   }
   .banner {
     grid-template-columns: repeat(1, 1fr);
@@ -334,41 +364,55 @@ footer p {
     display: block;
     grid-template-columns: 1fr;
   }
+
   .section-title h2 {
     font-size: 18px;
   }
+
   .banner-left p {
     font-size: 14px;
   }
-}
 
-@media screen and (max-width: 992px) {
   label.logo {
     font-size: 18px;
   }
-  .checkbtn {
-    display: block;
-  }
-
-  nav ul {
-    position: absolute;
-    width: 100%;
-    background: #ffffff;
-    top: 80px;
-    left: -100%;
-    transition: all 0.5s;
-    padding: 20px;
-    overflow: hidden;
-  }
-  nav ul li {
-    display: block;
-    margin: 20px 0;
-    line-height: 30px;
-  }
-  nav ul li a {
-    font-size: 20px;
-  }
-  #check:checked ~ ul {
-    left: 0;
-  }
 }
+
+@media only screen and (min-width: 601px) and  (max-width: 768px){
+    .navbar-items {
+        display: flex;
+      }
+      .checkbtn {
+        display: block;
+      }
+      label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+        margin-right: 80px;
+      }
+      nav ul {
+        position: absolute;
+        width: 100%;
+        background: #ffffff;
+        top: 80px;
+        left: -100%;
+        transition: all 0.5s;
+        padding: 20px;
+        /* overflow: hidden; */
+      }
+      #check:checked ~ ul {
+        left: 0;
+      }
+      .banner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .items {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .ecommerce-logo {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+      }
+}
+    
