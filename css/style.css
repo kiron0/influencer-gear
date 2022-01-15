@@ -316,6 +316,7 @@ footer p {
   }
   .banner-right img {
     align-items: center;
+    width: 100%;
   }
   .navbar-items {
     display: block;
